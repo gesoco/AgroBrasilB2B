@@ -1,9 +1,8 @@
-name: myapp
-description: A exported flutter project from FUNCTION12
-
+name: agro_brasil_b2_b
+description: A new Flutter project.
 
 # The following line prevents the package from being accidentally published to
-# pub.dev using `flutter pub publish`. This is preferred for private packages.
+# pub.dev using `pub publish`. This is preferred for private packages.
 publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 
 # The following defines the version and build number for your application.
@@ -13,47 +12,50 @@ publish_to: 'none' # Remove this line if you wish to publish to pub.dev
 # build by specifying --build-name and --build-number, respectively.
 # In Android, build-name is used as versionName while build-number used as versionCode.
 # Read more about Android versioning at https://developer.android.com/studio/publish/versioning
-# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
+# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
 # Read more about iOS versioning at
 # https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
-# In Windows, build-name is used as the major, minor, and patch parts
-# of the product and file versions while build-number is used as the build suffix.
 version: 1.0.0+1
 
 environment:
-  sdk: '>=2.18.2 <3.0.0'
+  sdk: ">=2.12.0 <3.0.0"
 
-# Dependencies specify other packages that your package needs in order to work.
-# To automatically upgrade your package dependencies to the latest versions
-# consider running `flutter pub upgrade --major-versions`. Alternatively,
-# dependencies can be manually updated by changing the version numbers below to
-# the latest version available on pub.dev. To see which dependencies have newer
-# versions available, run `flutter pub outdated`.
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  auto_size_text: 3.0.0
+  cached_network_image: 3.2.1
+  flutter_animate: 1.0.0
+  flutter_cache_manager: 3.3.0
+  font_awesome_flutter: 10.1.0
+  from_css_color: 2.0.0
+  go_router: 3.1.0
+  google_fonts: 3.0.1
+  intl: 0.17.0
+  json_path: 0.4.1
+  page_transition: 2.0.4
+  provider: 6.0.4
+  shared_preferences: 2.0.15
+  sqflite: 2.2.0+2
+  timeago: 3.2.2
+  url_launcher: 6.1.5
 
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.2
-  google_fonts: ^3.0.1
+  cupertino_icons: ^1.0.0
 
 dev_dependencies:
+
   flutter_test:
     sdk: flutter
-
-  # The "flutter_lints" package below contains a set of recommended lints to
-  # encourage good coding practices. The lint set provided by the package is
-  # activated in the `analysis_options.yaml` file located at the root of your
-  # package. See that file for information about deactivating specific lint
-  # rules and activating additional ones.
-  flutter_lints: ^2.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
-# The following section is specific to Flutter packages.
+# The following section is specific to Flutter.
 flutter:
 
   # The following line ensures that the Material Icons font is
@@ -62,251 +64,18 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
   assets:
-    - assets/login-screen/images/ellipse-10.png
-    - assets/login-screen/images/mobile-signal.png
-    - assets/login-screen/images/background-primary-bg.png
-    - assets/login-screen/images/combined-shape.png
-    - assets/login-screen/images/.png
-    - assets/login-screen/images/icmenuhome.png
-    - assets/login-screen/images/icmenuwishlist.png
-    - assets/login-screen/images/icon-ui-back.png
-    - assets/login-screen/images/background-primary-bg-Cdj.png
-    - assets/login-screen/images/icon-ui-share.png
-    - assets/login-screen/images/left-side.png
-    - assets/login-screen/images/battery.png
-    - assets/login-screen/images/wifi.png
-    - assets/login-screen/images/mobile-signal-5qF.png
-    - assets/login-screen/images/left-side-dCR.png
-    - assets/login-screen/images/ellipse-25.png
-    - assets/login-screen/images/mobile-signal-Rk9.png
-    - assets/login-screen/images/battery-Fh7.png
-    - assets/login-screen/images/chatting-comment-text.png
-    - assets/login-screen/images/background-primary-bg-kyT.png
-    - assets/login-screen/images/icon-ui-more.png
-    - assets/login-screen/images/ellipse-10-3KT.png
-    - assets/login-screen/images/background-primary-bg-QqB.png
-    - assets/login-screen/images/group.png
-    - assets/login-screen/images/background-primary-bg-6Qd.png
-    - assets/login-screen/images/ellipse-19.png
-    - assets/login-screen/images/keys-icon.png
-    - assets/login-screen/images/left-side-o25.png
-    - assets/login-screen/images/group-1283.png
-    - assets/login-screen/images/icmenuhome-vey.png
-    - assets/login-screen/images/vector.png
-    - assets/login-screen/images/ellipse-18.png
-    - assets/login-screen/images/icmenuwishlist-Ck5.png
-    - assets/login-screen/images/chatting-comment-text-zfw.png
-    - assets/login-screen/images/ellipse-18-G1B.png
-    - assets/login-screen/images/left-side-tcD.png
-    - assets/login-screen/images/left-side-t7o.png
-    - assets/login-screen/images/-XbK.png
-    - assets/login-screen/images/auto-group-4apf.png
-    - assets/login-screen/images/wifi-XkH.png
-    - assets/login-screen/images/dates-date-16-24px.png
-    - assets/login-screen/images/icon-ui-back-XdX.png
-    - assets/login-screen/images/wifi-i9b.png
-    - assets/login-screen/images/wifi-RZo.png
-    - assets/login-screen/images/ellipse-18-fyo.png
-    - assets/login-screen/images/battery-x7X.png
-    - assets/login-screen/images/wifi-J6q.png
-    - assets/login-screen/images/battery-CCD.png
-    - assets/login-screen/images/icmenuhome-huf.png
-    - assets/login-screen/images/group-zow.png
-    - assets/login-screen/images/battery-7df.png
-    - assets/login-screen/images/oval.png
-    - assets/login-screen/images/mobile-signal-aJq.png
-    - assets/login-screen/images/battery-eZb.png
-    - assets/login-screen/images/wifi-3Nm.png
-    - assets/login-screen/images/icon-ui-back-pGD.png
-    - assets/login-screen/images/group-H9o.png
-    - assets/login-screen/images/vector-MhP.png
-    - assets/login-screen/images/auto-group-fs9f.png
-    - assets/login-screen/images/group-Pvu.png
-    - assets/login-screen/images/left-side-WEq.png
-    - assets/login-screen/images/mobile-signal-Egd.png
-    - assets/login-screen/images/oval-k9B.png
-    - assets/login-screen/images/ellipse-18-sjb.png
-    - assets/login-screen/images/background-primary-bg-hc9.png
-    - assets/login-screen/images/icon-ui-more-pwf.png
-    - assets/login-screen/images/wifi-NTP.png
-    - assets/login-screen/images/battery-uy7.png
-    - assets/login-screen/images/mobile-signal-rNZ.png
-    - assets/login-screen/images/ellipse-10-PdP.png
-    - assets/login-screen/images/mobile-signal-KX3.png
-    - assets/login-screen/images/wifi-sHf.png
-    - assets/login-screen/images/background-primary-bg-4zy.png
-    - assets/login-screen/images/background-primary-bg-ayK.png
-    - assets/login-screen/images/mobile-signal-iZj.png
-    - assets/login-screen/images/mobile-signal-RmP.png
-    - assets/login-screen/images/keys-icon-Q7X.png
-    - assets/login-screen/images/left-side-LG5.png
-    - assets/login-screen/images/keys-icon-UNH.png
-    - assets/login-screen/images/group-wGy.png
-    - assets/login-screen/images/battery-TWD.png
-    - assets/login-screen/images/vector-tNZ.png
-    - assets/login-screen/images/flat-color-icons-google.png
-    - assets/login-screen/images/background-primary-bg-4CV.png
-    - assets/login-screen/images/battery-8c5.png
-    - assets/login-screen/images/combined-shape-e4d.png
-    - assets/login-screen/images/icmenuwishlist-AYm.png
-    - assets/login-screen/images/ellipse-25-hYh.png
-    - assets/login-screen/images/ellipse-26.png
-    - assets/login-screen/images/icmenuwishlist-NtD.png
-    - assets/login-screen/images/logos-facebook.png
-    - assets/login-screen/images/battery-Fh7-Rbb.png
-    - assets/login-screen/images/ellipse-10-ktm.png
-    - assets/login-screen/images/combined-shape-tVB.png
-    - assets/login-screen/images/chatting-comment-text-fCR.png
-    - assets/login-screen/images/-GYu.png
-    - assets/login-screen/images/delete.png
-    - assets/login-screen/images/group-Kos.png
-    - assets/login-screen/images/image-removebg-preview-1.png
-    - assets/login-screen/images/emoji.png
-    - assets/login-screen/images/chatting-comment-text-cQD.png
-    - assets/login-screen/images/wifi-Rky.png
-    - assets/login-screen/images/ellipse-11-bg.png
-    - assets/login-screen/images/icmenuhome-Dmw.png
-    - assets/login-screen/images/whatsapp-logo-png-2261-1.png
-    - assets/login-screen/images/group-1284.png
-    - assets/login-screen/images/rectangle-54-bg.png
-    - assets/login-screen/images/notification-2.png
-    - assets/login-screen/images/notification-2-9pq.png
-    - assets/login-screen/images/rectangle-1394.png
-    - assets/login-screen/images/rectangle-1390.png
-    - assets/login-screen/images/group-1282.png
-    - assets/login-screen/images/rectangle-1386.png
-    - assets/login-screen/images/notification-1.png
-    - assets/login-screen/images/wifi-3ph.png
-    - assets/login-screen/images/rectangle-1396.png
-    - assets/login-screen/images/rectangle-1412.png
-    - assets/login-screen/images/searchicon153438-1-bg.png
-    - assets/login-screen/images/rectangle-1395.png
-    - assets/login-screen/images/rectangle-1390-ERs.png
-    - assets/login-screen/images/group-Du7.png
-    - assets/login-screen/images/mobile-signal-GhB.png
-    - assets/login-screen/images/vector-Lg5.png
-    - assets/login-screen/images/-xJR.png
-    - assets/login-screen/images/rectangle-1396-cqb.png
-    - assets/login-screen/images/icmenuwishlist-LKw.png
-    - assets/login-screen/images/rectangle-1386-wdf.png
-    - assets/login-screen/images/group-avR.png
-    - assets/login-screen/images/battery-aKP.png
-    - assets/login-screen/images/rectangle-1395-yZw.png
-    - assets/login-screen/images/-URj.png
-    - assets/login-screen/images/wifi-X6u.png
-    - assets/login-screen/images/vector-gys.png
-    - assets/login-screen/images/icmenuhome-y9f.png
-    - assets/login-screen/images/ellipse-8.png
-    - assets/login-screen/images/rectangle-1385.png
-    - assets/login-screen/images/keys-icon-2wX.png
-    - assets/login-screen/images/emoji-5cH.png
-    - assets/login-screen/images/wifi-XDP.png
-    - assets/login-screen/images/background-primary-bg-T8y.png
-    - assets/login-screen/images/mobile-signal-6S9.png
-    - assets/login-screen/images/rectangle-1385-au3.png
-    - assets/login-screen/images/background-primary-bg-1Mo.png
-    - assets/login-screen/images/background-primary-bg-9Zf.png
-    - assets/login-screen/images/battery-wA5.png
-    - assets/login-screen/images/left-side-aRs.png
-    - assets/login-screen/images/left-side-jzu.png
-    - assets/login-screen/images/ellipse-9.png
-    - assets/login-screen/images/delete-9Pj.png
-    - assets/login-screen/images/chatting-comment-text-Fkh.png
-    - assets/login-screen/images/background-primary-bg-dvu.png
-    - assets/login-screen/images/wifi-Wr1.png
-    - assets/login-screen/images/-F6m.png
-    - assets/login-screen/images/battery-SUD.png
-    - assets/login-screen/images/keys-icon-wiM.png
-    - assets/login-screen/images/rectangle-1394-nEH.png
-    - assets/login-screen/images/background-primary-bg-27f.png
-    - assets/login-screen/images/ellipse-11.png
-    - assets/login-screen/images/keys-icon-xLd.png
-    - assets/login-screen/images/ellipse-8-76M.png
-    - assets/login-screen/images/wifi-VuX.png
-    - assets/login-screen/images/ellipse-9-wDo.png
-    - assets/login-screen/images/background-primary-bg-wqF.png
-    - assets/login-screen/images/battery-757.png
-    - assets/login-screen/images/mobile-signal-ecm.png
-    - assets/login-screen/images/emoji-dd7.png
-    - assets/login-screen/images/background-primary-bg-cdT.png
-    - assets/login-screen/images/keys-icon-wed.png
-    - assets/login-screen/images/background-primary-bg-rqK.png
-    - assets/login-screen/images/mobile-signal-fRP.png
-    - assets/login-screen/images/ellipse-11-rzy.png
-    - assets/login-screen/images/ellipse-9-me5.png
-    - assets/login-screen/images/battery-LeR.png
-    - assets/login-screen/images/battery-PGR.png
-    - assets/login-screen/images/ellipse-9-SQD.png
-    - assets/login-screen/images/morevert.png
-    - assets/login-screen/images/wifi-ve9.png
-    - assets/login-screen/images/icmenuwishlist-pUd.png
-    - assets/login-screen/images/mobile-signal-YfX.png
-    - assets/login-screen/images/left-side-HND.png
-    - assets/login-screen/images/keys-icon-ec5.png
-    - assets/login-screen/images/left-side-Atd.png
-    - assets/login-screen/images/mobile-signal-s2M.png
-    - assets/login-screen/images/left-side-mhP.png
-    - assets/login-screen/images/keys-icon-6Ds.png
-    - assets/login-screen/images/-F2D.png
-    - assets/login-screen/images/vector-VEM.png
-    - assets/login-screen/images/wifi-HKj.png
-    - assets/login-screen/images/vector-2C5.png
-    - assets/login-screen/images/wifi-vLV.png
-    - assets/login-screen/images/ellipse-1.png
-    - assets/login-screen/images/ellipse-1-KwT.png
-    - assets/login-screen/images/ellipse-1-a6h.png
-    - assets/login-screen/images/ellipse-9-HuP.png
-    - assets/login-screen/images/auto-group-g2nh.png
-    - assets/login-screen/images/vector-9Zo.png
-    - assets/login-screen/images/mobile-signal-EbF.png
-    - assets/login-screen/images/background-primary-bg-9TK.png
-    - assets/login-screen/images/auto-group-3fqp.png
-    - assets/login-screen/images/profile.png
-    - assets/login-screen/images/ellipse-8-6fw.png
-    - assets/login-screen/images/mobile-signal-c8V.png
-    - assets/login-screen/images/icmenuhome-DJd.png
-    - assets/login-screen/images/chatting-comment-text-MbB.png
-    - assets/login-screen/images/auto-group-avyd.png
-    - assets/login-screen/images/vector-Khw.png
-    - assets/login-screen/images/ellipse-1-EeR.png
-    - assets/login-screen/images/battery-NKP.png
-    - assets/login-screen/images/text.png
-    - assets/login-screen/images/auto-group-ctm7.png
-    - assets/login-screen/images/group-Y2y.png
-    - assets/login-screen/images/ellipse-1-QTw.png
-    - assets/login-screen/images/vector-HcR.png
-    - assets/login-screen/images/icmenuwishlist-mG1.png
-    - assets/login-screen/images/wifi-qmX.png
-    - assets/login-screen/images/-Qaq.png
-    - assets/login-screen/images/system-icon-24px-offer.png
-    - assets/login-screen/images/group-xjo.png
-    - assets/login-screen/images/searchicon153438-1-bg-Kob.png
-    - assets/login-screen/images/image-1463.png
-    - assets/login-screen/images/system-icon-24px-offer-wjT.png
-    - assets/login-screen/images/battery-7Em.png
-    - assets/login-screen/images/image-1465.png
-    - assets/login-screen/images/image-1468.png
-    - assets/login-screen/images/image-1466.png
-    - assets/login-screen/images/system-icon-24px-offer-SCD.png
-    - assets/login-screen/images/system-icon-24px-offer-6P7.png
-    - assets/login-screen/images/system-icon-24px-offer-4us.png
-    - assets/login-screen/images/icmenuhome-VkH.png
-    - assets/login-screen/images/system-icon-24px-left.png
-    - assets/login-screen/images/mobile-signal-Jqs.png
-    - assets/login-screen/images/chatting-comment-text-7nd.png
-    - assets/login-screen/images/image-1461.png
-    - assets/login-screen/images/icmenuwishlist-GoP.png
-    - assets/login-screen/images/vector-cvh.png
-    - assets/login-screen/images/image-1462.png
-    - assets/login-screen/images/arrow-back-ios.png
-    - assets/login-screen/images/image-1464.png
+    - assets/fonts/
+    - assets/images/
+    - assets/videos/
+    - assets/audios/
+    - assets/lottie_animations/
+    - assets/rive_animations/
+    - assets/pdfs/
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
-  # https://flutter.dev/assets-and-images/#resolution-aware
+  # https://flutter.dev/assets-and-images/#resolution-aware.
 
   # For details regarding adding assets from package dependencies, see
   # https://flutter.dev/assets-and-images/#from-packages

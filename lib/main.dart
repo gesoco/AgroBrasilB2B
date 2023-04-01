@@ -1,54 +1,70 @@
-import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
-import 'dart:ui';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:myapp/utils.dart';
-import 'package:myapp/login-screen/sign-in.dart';
-// import 'package:myapp/login-screen/sign-in-JDs.dart';
-// import 'package:myapp/login-screen/sign-in-6jo.dart';
-// import 'package:myapp/login-screen/sign-in-sBK.dart';
-// import 'package:myapp/login-screen/lengkapi-profil.dart';
-// import 'package:myapp/login-screen/loading.dart';
-// import 'package:myapp/login-screen/register.dart';
-// import 'package:myapp/login-screen/register-Sso.dart';
-// import 'package:myapp/login-screen/verifikasi.dart';
-// import 'package:myapp/login-screen/register-k53.dart';
-// import 'package:myapp/login-screen/detail-produk-.dart';
-// import 'package:myapp/login-screen/detail-produk--jau.dart';
-// import 'package:myapp/login-screen/home.dart';
-// import 'package:myapp/login-screen/vector.dart';
-// import 'package:myapp/login-screen/.dart';
-// import 'package:myapp/login-screen/profil-pengguna.dart';
-// import 'package:myapp/login-screen/profil-pengguna-nm3.dart';
-// import 'package:myapp/login-screen/masuk.dart';
-// import 'package:myapp/login-screen/masuk-Fob.dart';
-// import 'package:myapp/login-screen/masuk-e3X.dart';
-// import 'package:myapp/login-screen/ubah-passworld.dart';
-// import 'package:myapp/login-screen/ubah-passworld-V8h.dart';
-// import 'package:myapp/login-screen/live-streaming.dart';
-// import 'package:myapp/login-screen/notification-offer.dart';
-// import 'package:myapp/login-screen/arrow-back-ios.dart';
-// import 'package:myapp/login-screen/vector-L21.dart';
-// import 'package:myapp/login-screen/image-1461.dart';
-// import 'package:myapp/login-screen/image-1462.dart';
+import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'flutter_flow/flutter_flow_theme.dart';
+import 'flutter_flow/flutter_flow_util.dart';
+import 'flutter_flow/internationalization.dart';
+import 'flutter_flow/nav/nav.dart';
+import 'index.dart';
 
-class MyApp extends StatelessWidget {
-	@override
-	Widget build(BuildContext context) {
-	return MaterialApp(
-		title: 'Flutter',
-		debugShowCheckedModeBanner: false,
-		scrollBehavior: MyCustomScrollBehavior(),
-		theme: ThemeData(
-		primarySwatch: Colors.blue,
-		),
-		home: Scaffold(
-		body: SingleChildScrollView(
-			child: Scene(),
-		),
-		),
-	);
-	}
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await FlutterFlowTheme.initialize();
+
+  runApp(MyApp());
+}
+
+class MyApp extends StatefulWidget {
+  // This widget is the root of your application.
+  @override
+  State<MyApp> createState() => _MyAppState();
+
+  static _MyAppState of(BuildContext context) =>
+      context.findAncestorStateOfType<_MyAppState>()!;
+}
+
+class _MyAppState extends State<MyApp> {
+  Locale? _locale;
+  ThemeMode _themeMode = FlutterFlowTheme.themeMode;
+
+  late AppStateNotifier _appStateNotifier;
+  late GoRouter _router;
+
+  @override
+  void initState() {
+    super.initState();
+    _appStateNotifier = AppStateNotifier();
+    _router = createRouter(_appStateNotifier);
+  }
+
+  void setLocale(String language) {
+    setState(() => _locale = createLocale(language));
+  }
+
+  void setThemeMode(ThemeMode mode) => setState(() {
+        _themeMode = mode;
+        FlutterFlowTheme.saveThemeMode(mode);
+      });
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp.router(
+      title: 'AgroBrasilB2B',
+      localizationsDelegates: [
+        FFLocalizationsDelegate(),
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+      ],
+      locale: _locale,
+      supportedLocales: const [Locale('en', '')],
+      theme: ThemeData(brightness: Brightness.light),
+      darkTheme: ThemeData(brightness: Brightness.dark),
+      themeMode: _themeMode,
+      routeInformationParser: _router.routeInformationParser,
+      routerDelegate: _router.routerDelegate,
+    );
+  }
 }
